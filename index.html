@@ -4,20 +4,29 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
+    <h1 class="page-heading">Tutorials</h1>
 
-  <ul class="post-list">
     {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+    <div class="post-tutorial">
+        <div class="post-meta">
+            <span>{{ post.date | date: "%b %-d, %Y" }}</span>
+            <span class="post-author">{{ post.author }}</span>
+        </div>
+        <div class="post-image">
+            <img src="/images/tutorials/{{ post.image }}" alt="Node.js image" />
+        </div>
+        <div class="post-content">
+            <h2>
+                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            </h2>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
+            <div class="post-tags-small">
+                {% include tags.html %}
+            </div>
+        </div>
+    </div>
     {% endfor %}
-  </ul>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>

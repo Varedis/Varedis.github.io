@@ -4,8 +4,6 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+Developmentr was set up by Rob Scott as an effort to bring high quality and informative tutorials to the development community. 
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
-
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+Rob Scott has worked professionally in various forms of development for over 6 years. During that time he has worked with some big name clients in both the UK and USA using various technologies to fulfill the needs of the business.

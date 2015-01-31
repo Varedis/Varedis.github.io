@@ -2,9 +2,9 @@
  * Site header
  */
 .site-header {
-    border-top: 5px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-light;
-    min-height: 56px;
+    border-top: 5px solid $brand-color;
+    border-bottom: 5px solid $brand-color;
+    min-height: 100px;
 
     // Positioning context for the mobile navigation icon
     position: relative;
@@ -12,7 +12,7 @@
 
 .site-title {
     font-size: 26px;
-    line-height: 56px;
+    line-height: 100px;
     letter-spacing: -1px;
     margin-bottom: 0;
     float: left;
@@ -25,7 +25,7 @@
 
 .site-nav {
     float: right;
-    line-height: 56px;
+    line-height: 100px;
 
     .menu-icon {
         display: none;
@@ -43,7 +43,7 @@
 
     @include media-query($on-palm) {
         position: absolute;
-        top: 9px;
+        top: 30px;
         right: 30px;
         background-color: $background-color;
         border: 1px solid $grey-color-light;
@@ -92,8 +92,10 @@
  * Site footer
  */
 .site-footer {
-    border-top: 1px solid $grey-color-light;
+    border-top: 4px solid $brand-color;
     padding: $spacing-unit 0;
+    background-color: $grey-color-dark;
+  color: #FFFFFF;
 }
 
 .footer-heading {
@@ -193,6 +195,29 @@
 /**
  * Posts
  */
+.post-tutorial {
+  width: 33%;
+  min-height: 200px;
+  border-radius: 5px;
+  box-shadow: 0 0 4px 0 #323330;
+}
+
+.post-content {
+  padding: 10px;
+}
+
+.post-meta {
+  background-color: lighten($brand-color, 35%);
+  border-bottom: 4px solid $brand-color;
+  padding: 10px;
+  border-radius: 4px 4px 0 0;
+  color: $brand-color;
+  margin-bottom: 0;
+  .post-author {
+    float: right;
+  }
+}
+
 .post-header {
     margin-bottom: $spacing-unit;
 }
@@ -233,4 +258,68 @@
             font-size: 18px;
         }
     }
+}
+
+.post-difficulty {
+  line-height: 100px;
+  background-color: $brand-color;
+  text-align: center;
+  h1 {
+    color: #FFFFFF;
+    font-family: 'Lato', sans-serif;
+  }
+}
+
+.post-tags {
+  h5 {
+    margin-bottom: 0;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+
+    li {
+      display: inline;
+      margin: 0;
+      line-height: 60px;
+
+      &.tag {
+        padding: 10px;
+        text-align: center;
+        min-width: 180px;
+        margin-right: 10px;
+        border: 2px solid;
+      }
+
+      &.nodejs {
+        @extend .tag;
+        background-color: $nodejs-background-color;
+        color: $nodejs-color;
+        border-color: darken($nodejs-background-color, 15%);
+      }
+      &.mean {
+        @extend .tag;
+        background-color: $mean-background-color;
+        color: $mean-color;
+        border-color: darken($mean-background-color, 10%);
+      }
+      &.express {
+        @extend .tag;
+        background-color: $express-background-color;
+        color: $express-color;
+        border-color: darken($express-background-color, 50%);
+      }
+      &.javascript {
+        @extend .tag;
+        background-color: $javascript-background-color;
+        color: $javascript-color;
+        border-color: darken($javascript-background-color, 30%);
+      }
+    }
+  }
+}
+
+.post-tags-small {
+  @extend .post-tags;
+  font-size: 10px;
 }

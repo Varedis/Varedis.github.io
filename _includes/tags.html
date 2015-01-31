@@ -1,0 +1,12 @@
+<ul>
+    {% if post.tags %}
+        {% for tag in post.tags %}
+            <li class="{{ tag.class }}">{{ tag.name }}</li>
+        {% endfor %}
+    {% endif %}
+    {% if page.tags %}
+        {% for tag in page.tags %}
+            <li class="{{ tag.class }}">{{ tag.name }}</li>
+        {% endfor %}
+    {% endif %}
+</ul>

@@ -3,7 +3,27 @@ layout: post
 title:  "Learn Node JS in 30 minutes or less"
 date:   2015-01-30 13:25:16
 categories: nodejs
-tags: nodes.js MEAN express javascript
+tags: [
+    {
+        name: "Node.js",
+        class: "nodejs"
+    },
+    {
+        name: "MEAN",
+        class: "mean"
+    },
+    {
+        name: "Express",
+        class: "express"
+    },
+    {
+        name: "Javascript",
+        class: "javascript"
+    }
+]
+difficulty: Beginner
+author: Rob Scott
+image: nodejs_logo_green.jpg
 ---
 
 > Node.js is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.
