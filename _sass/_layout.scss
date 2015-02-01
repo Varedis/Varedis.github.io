@@ -196,10 +196,24 @@
  * Posts
  */
 .post-tutorial {
-  width: 33%;
+  width: 31%;
   min-height: 200px;
   border-radius: 5px;
   box-shadow: 0 0 4px 0 #323330;
+  float: left;
+  margin-right: 1%;
+  margin-left: 1%;
+  margin-bottom: 20px;
+
+  @include media-query($on-laptop) {
+    width: 48%;
+  }
+
+  @include media-query($on-tablet) {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
 }
 
 .post-content {
@@ -222,10 +236,16 @@
     margin-bottom: $spacing-unit;
 }
 
+.post-comments {
+  font-size: 12px;
+  float: right;
+}
+
 .post-title {
     font-size: 42px;
     letter-spacing: -1px;
     line-height: 1;
+  color: $brand-color;
 
     @include media-query($on-laptop) {
         font-size: 36px;
@@ -260,6 +280,14 @@
     }
 }
 
+article {
+  &.post-content {
+    @extend .post-content;
+
+    font-family: Helvetica, Arial, sans-serif;
+  }
+}
+
 .post-difficulty {
   line-height: 100px;
   background-color: $brand-color;
@@ -274,7 +302,11 @@
   h5 {
     margin-bottom: 0;
   }
+  .ss {
+    margin-right: 10px;
+  }
   ul {
+    display: inline;
     list-style: none;
     margin: 0;
 

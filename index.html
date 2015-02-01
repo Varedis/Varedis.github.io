@@ -9,8 +9,8 @@ layout: default
     {% for post in site.posts %}
     <div class="post-tutorial">
         <div class="post-meta">
-            <span>{{ post.date | date: "%b %-d, %Y" }}</span>
-            <span class="post-author">{{ post.author }}</span>
+            <span><i class="ss ss-calendar"></i> {{ post.date | date: "%b %-d, %Y" }}</span>
+            <span class="post-author"><i class="ss ss-user"></i> {{ post.author }}</span>
         </div>
         <div class="post-image">
             <img src="/images/tutorials/{{ post.image }}" alt="Node.js image" />
@@ -19,14 +19,22 @@ layout: default
             <h2>
                 <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
             </h2>
-
             <div class="post-tags-small">
+                <i class="ss ss-tag md"></i>
                 {% include tags.html %}
             </div>
+            <div class="post-comments">
+                <i class="ss ss-chat"></i> <a href="{{ post.url | prepend: site.baseurl }}#disqus_thread">0 Comments</a>
+            </div>
+            <div class="clearfix"></div>
         </div>
     </div>
     {% endfor %}
 
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+    <div class="clearfix"></div>
+
+    <div>
+        <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+    </div>
 
 </div>

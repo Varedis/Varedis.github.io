@@ -202,3 +202,27 @@ pre {
         }
     }
 }
+
+.clearfix {
+  @extend %clearfix;
+}
+
+.ss {
+  color: $brand-color;
+  vertical-align: middle;
+  &.xs {
+    font-size: 10px;
+  }
+  &.sm {
+    font-size: 14px;
+  }
+  &.md {
+    font-size: 22px;
+  }
+  &.lg {
+    font-size: 32px;
+  }
+  &.xl {
+    font-size: 48px;
+  }
+}
