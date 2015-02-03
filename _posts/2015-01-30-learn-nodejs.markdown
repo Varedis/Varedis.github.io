@@ -210,7 +210,7 @@ Well, we have created a web server using native node.js functionality, but what 
 
 You may be familiar with a **LAMP** (Linux, Apache, MySQL, PHP) stack. **MEAN** stands for:
  
-* **M**ongoDb - NoSQL database
+* **M**ongoDB - NoSQL database
 * **E**xpress - Web framework
 * **A**ngular - Frontend framework
 * **N**ode - Server framework
