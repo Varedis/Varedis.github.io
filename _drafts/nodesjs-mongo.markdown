@@ -66,6 +66,7 @@ For this tutorial we will be creating a database on [Mongolab][mongolab-link]{:t
 Your database will take a moment to set up, and you should be taken back to your home screen, the only other thing you need to do is create a user for your database so you can access the information. **WARNING: The database is publically accessable so you likely want to pick a strong username and password combo, if you are actually using it for production data**
 
 To create a user you need to do the following:
+
 1. Enter your newly created database by clicking on it from your home menu.
 2. Go to the *Users* tab and click *Add database user*.
 3. Enter the *username* and *password* you wish to use with your application, for the purpose of this tutorial you want to leave *Make read-only* as unticked.
