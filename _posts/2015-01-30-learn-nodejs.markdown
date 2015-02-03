@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Learn Node JS in 30 minutes or less"
+title:  "Learn Node JS in 30 minutes or less - Part 1"
 date:   2015-01-30 13:25:16
 categories: nodejs
 tags: [
@@ -26,13 +26,17 @@ author: Rob Scott
 image: nodejs_logo_green.jpg
 ---
 
+# Summary
+
+In Part 1 of this tutorial series, we will be looking at getting started with Node.js and taking our first steps in developing an application.
+
+# Introduction
+
 > Node.js is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.
 
 That is the offical tag line of Node.js, and that's great, but what does it mean for developers and more importantly, how can we harness the power of Node.js to build faster and more scalable applications in the real world?
 
 After this tutorial you will have some understanding what this means, and what Node.js can do for you.
-
-# Introduction
 
 Having used PHP for nearly 7 years to do all of my server side work, I was amazed to find something so simple yet powerful like Node.js. 
 
