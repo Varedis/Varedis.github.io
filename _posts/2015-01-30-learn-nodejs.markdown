@@ -315,6 +315,8 @@ To view the POST and DELETE responses you will need to use an app like [Postman]
 
 In this short tutorial we should have provided an introduction into the basics of creating a Node web server, package installation and working with part of the **MEAN** stack. There is much more to discover and the next tutorial will expand on the **MEAN** stack we have created so far.
 
+Source code for what we have created in this tutorial can be found here: [github](https://github.com/Varedis/Learn-nodejs-in-30-minutes){:target="_blank"}
+
 
 [nodejs-site]:      http://nodejs.org/
 [node-api-docs]:    http://nodejs.org/api/
