@@ -347,6 +347,13 @@ article {
         color: $javascript-color;
         border-color: darken($javascript-background-color, 30%);
       }
+      &.mongodb {
+        @extend .tag;
+        background-color: $mongodb-background-color;
+        color: $mongodb-color;
+        border-color: darken($mongodb-background-color, 15%);
+
+      }
     }
   }
 }

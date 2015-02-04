@@ -13,12 +13,12 @@ tags: [
         class: "mean"
     },
     {
-        name: "Express",
-        class: "express"
-    },
-    {
         name: "Javascript",
         class: "javascript"
+    },
+    {
+        name: "MongoDB",
+        class: "mongodb"
     }
 ]
 difficulty: Beginner
@@ -74,9 +74,190 @@ To create a user you need to do the following:
 
 If you can see your user in the list, then you are ready to use MongoDB in your application.
 
+You should now have a link visible that looks a little something like this:
+
+{% highlight javascript %}
+mongodb://myUser:myPassword@ds039441.mongolab.com:39441/learn-nodejs
+{% endhighlight %}
+
+This will be the link we use in our application to connect to the database.
+
 # Getting MongoDB into your application
 
+The first thing we need to do is install a new package to enable us to connect to the MongoDB database. To do that, run the following line from your terminal:
 
+{% highlight bash %}
+npm install --save mongoose
+{% endhighlight %}
+
+Mongoose makes it nice and easy for interacting with our MongoDB database. To connect to your database, we are going to replace the contents of the server.js file with the following:
+
+#### server.js
+
+{% highlight javascript %}
+var express = require('express'),
+    mongoose = require('mongoose');
+
+mongoose.connect('mongodb://myUser:myPassword@ds039441.mongolab.com:39441/learn-nodejs');
+var db = mongoose.connection;
+
+var app = express();
+
+app.get('/', function(request, response) {
+    console.log(db);
+    response.end();
+});
+
+app.listen(3000);
+console.log("Visit your web page at http://localhost:3000");
+{% endhighlight %}
+
+Ensure you change the credentials being passed to mongolab with the ones you set up. Once that is done, we now have the `db` object that we can interact with to start storing things in the database.
+
+# Creating data in MongoDB
+
+You will notice that as of yet we have not created a table (MongoDB calls these *collections*) for our data to be inserted in to, with MongoDB we don't need to, our collections will be created automatically when we insert the first piece of data into it.
+
+To keep our project clean we don't want to put the code for managing the User collection inside the *server.js* file, otherwise we will just end up cluttering the file and making it unmanageable. Luckily we can take advantage of modules, and that is exactly what we are going to do.
+
+Create a new folder in the root of your project called **models**. Then inside this folder we are going to create a file called **user.js**. When we want a new collection, we will just create a new file with the same name.
+
+Your folder structure should now look something like this:
+
+{% highlight bash %}
+- learn-nodejs
+    | - models
+        | - user.js
+    | - node_modules
+    | - package.json
+    | - server.js
+{% endhighlight %}
+
+We are going to change the following files to enable adding data to our MongoDB
+
+#### models/user.js
+
+Add the following code to the `user.js` file:
+
+{% highlight javascript %}
+var mongoose = require('mongoose');
+
+var userSchema = mongoose.Schema({
+    email: { type: String, required: true },
+    username: { type: String, required: true },
+    password: { type: String, required: true },
+    first_name: String,
+    last_name: String,
+    created_at: Date,
+    updated_at: Date
+});
+
+userSchema.pre('save', function(next) {
+    var user = this;
+
+    if(!user.created_at) {
+        user.created_at = new Date();
+    }
+    user.updated_at = new Date();
+
+    next();
+});
+
+module.exports = mongoose.model('User', userSchema);
+{% endhighlight %}
+
+##### Code Breakdown
+
+1. `var mongoose = require('mongoose');` - To access the mongoose functions in this module we need to require it.
+2. `var userSchema = mongoose.Schema({ ... });` - Here we are creating the schema for the collection, basically we are telling the collection what fields we want to include and the data types.
+3. `userSchema.pre('save', function(next) { ... };` - We can hook into functions to run blocks of code before the code is run by mongoose, here we are altering some date fields before saving the data.
+4. `var User = module.exports = mongoose.model('User', userSchema);` - Lastly we are exporting access to the model so we can access it outside of this file.
+
+#### index.js
+
+Add the following lines to the `index.js` file:
+
+Under your current requires add the following new lines
+
+{% highlight javascript %}
+// MODELS
+var User = require('./models/user');
+{% endhighlight %}
+
+Change your express route to look like the following:
+
+{% highlight javascript %}
+app.get('/', function(request, response) {
+    var user = new User();
+    user.email = 'test1@hotmail.com';
+    user.username = 'test1';
+    user.password = 'password';
+    user.first_name = 'test';
+    user.last_name = 'user';
+    user.save();
+
+    response.end("User Created");
+});
+{% endhighlight %}
+
+# Checking our work
+
+After running `nodemon server.js` or `node server.js` and accessing [localhost][localhost-3000]{:target="_blank"}, you should see the message *User Created*. If you check your collection in Mongolab, then you will be able to see that all the information has been inserted correctly.
+
+Now lets look at how to get that user back out of our collection so we can use it in our code.
+
+# Fetching data from a Collection
+
+Now that we have a user model (`models/user.js`) we can easily expand it with custom functions for getting information back out of the database.
+
+Edit the `models/user.js` file with the following code:
+
+#### models/user.js
+
+{% highlight javascript %}
+var User = module.exports = mongoose.model('User', userSchema);
+
+module.exports.getUserById = function(id, callback) {
+    User.findById(id, callback);
+};
+
+module.exports.getUserByEmail = function(email, callback) {
+    var query = {
+        email: email
+    };
+    User.findOne(query, callback);
+};
+{% endhighlight %}
+
+Now we can add a new route in our application to fetch out a specific user by its id:
+
+#### server.js
+
+{% highlight javascript %}
+app.get('/api/user/:id', function(request, response) {
+    User.getUserById(request.params.id, function(err, doc) {
+        if(err) {
+            console.error(err);
+            return;
+        }
+
+        response.json(doc);
+    });
+});
+{% endhighlight %}
+
+Before we make the request we need to get the id of the object from Mongolab, explore your collection and find the value assigned to **_id**. The value will look something like this: **54d22c6b8cf8a7201459d90f**
+
+Then in your browser visit *http://localhost:3000/api/user/* with your id on the end and you should see a json string that details the object that was added.
+
+# Conclusion
+
+In this short session, we have covered a lot of ground, we have explored MongoDB, created methods for adding a retrieving data and structured our project a little bit more.
+
+In the next part of this series we will be looking at the last part of the **MEAN** stack. **Angular JS**.
+
+Source code for what we have created in this tutorial can be found here: [github](https://github.com/Varedis/Learn-nodejs-in-30-minutes/tree/part-2){:target="_blank"}
 
 
 [mongolab-link]:        https://mongolab.com
+[localhost-3000]:       http://localhost:3000
