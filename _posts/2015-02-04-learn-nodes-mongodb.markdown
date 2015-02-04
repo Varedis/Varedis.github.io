@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Learn Node.js in 30 minutes or less - Part 2
-date: 
+date: 2015-02-04 22:12:00 -08:00
 categories: nodejs
 tags: [
   {
