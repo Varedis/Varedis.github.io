@@ -300,11 +300,17 @@ article {
 
 .post-share {
     padding-bottom: 20px;
+    .button {
+        float: left;
+    }
     .facebook-button {
-        
+        @extend .button;
     }
     .twitter-button {
-        vertical-align: middle;
+        @extend .button;
+        iframe {
+            vertical-align: middle;
+        }
     }
 }
 
