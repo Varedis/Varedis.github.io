@@ -302,6 +302,7 @@ article {
     padding-bottom: 20px;
     .button {
         float: left;
+        padding-right: 20px;
     }
     .facebook-button {
         @extend .button;
@@ -311,6 +312,9 @@ article {
         iframe {
             vertical-align: middle;
         }
+    }
+    .google-button {
+        @extend .button;
     }
 }
 
