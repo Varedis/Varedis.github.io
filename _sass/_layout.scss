@@ -378,3 +378,7 @@ article {
   @extend .post-tags;
   font-size: 10px;
 }
+
+.clearfix {
+    @extend %clearfix;
+}
