@@ -375,7 +375,12 @@ article {
         background-color: $mongodb-background-color;
         color: $mongodb-color;
         border-color: darken($mongodb-background-color, 15%);
-
+      }
+      &.angularjs {
+        @extend .tag;
+        background-color: $angular-background-color;
+        color: $angular-color;
+        border-color: darken($angular-background-color, 15%);
       }
     }
   }
