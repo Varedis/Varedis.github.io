@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Learn Angular JS in 30 minutes or less"
-date:   2015-02-16 12:30:00
+date:   2015-02-21 14:18:00
 categories: angularjs
 tags: [
     {
