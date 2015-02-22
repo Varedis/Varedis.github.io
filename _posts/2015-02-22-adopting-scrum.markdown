@@ -47,7 +47,7 @@ There will be some words in this tutorial which may not make a whole lot of sens
 * **Customer** - A customer can mean an internal or external customer, basically someone who wants some work doing.
 * **Product Backlog** - A list of tasks or work that needs to be done in order to deliver the product.
 * **Tasks** or **User Stories** - These are both variations of the same thing, these are the individual pieces of work that make up the **Product Backlog**.
-* **Sprint** - 
+* **Sprint** - A term for the work that is done in a short space of time, normally 1 - 4 weeks.
 
 # Scrum Roles
 

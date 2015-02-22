@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7df4b264-9038-400a-ae8a-9e59ee6d2104" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/tutorials/scrum-board.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/2015-02-22-adopting-scrum.markdown" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2015-02-22-adopting-scrum.markdown" afterPath="$PROJECT_DIR$/_posts/2015-02-22-adopting-scrum.markdown" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="developmentr-jekyll.iws" />
@@ -38,8 +37,8 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.48220438" vertical-offset="0" max-vertical-offset="3660">
-              <caret line="28" column="100" selection-start-line="28" selection-start-column="100" selection-end-line="28" selection-end-column="100" />
+            <state vertical-scroll-proportion="0.7749713" vertical-offset="60" max-vertical-offset="3660">
+              <caret line="49" column="95" selection-start-line="49" selection-start-column="95" selection-end-line="49" selection-end-column="95" />
               <folding />
             </state>
           </provider>
@@ -139,6 +138,7 @@
         <option value="$PROJECT_DIR$/_drafts/learn-angularjs.markdown" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/_drafts/adopting-scrum.markdown" />
+        <option value="$PROJECT_DIR$/_posts/2015-02-22-adopting-scrum.markdown" />
       </list>
     </option>
   </component>
@@ -356,7 +356,13 @@
       <option name="project" value="LOCAL" />
       <updated>1424528422181</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Launched Scrum Part 1">
+      <created>1424626123774</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1424626123774</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -404,7 +410,8 @@
     <MESSAGE value="Disqus added. Icon font set added. Google Analytics added.&#10;Mobile styling added." />
     <MESSAGE value="Full draft for Part 2 of the MEAN series added." />
     <MESSAGE value="Launched Angular JS tutorial" />
-    <option name="LAST_COMMIT_MESSAGE" value="Launched Angular JS tutorial" />
+    <MESSAGE value="Launched Scrum Part 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Launched Scrum Part 1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -806,8 +813,8 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48220438" vertical-offset="0" max-vertical-offset="3660">
-          <caret line="28" column="100" selection-start-line="28" selection-start-column="100" selection-end-line="28" selection-end-column="100" />
+        <state vertical-scroll-proportion="0.7749713" vertical-offset="60" max-vertical-offset="3660">
+          <caret line="49" column="95" selection-start-line="49" selection-start-column="95" selection-end-line="49" selection-end-column="95" />
           <folding />
         </state>
       </provider>
