@@ -19,7 +19,7 @@ tags: [
 ]
 difficulty: Beginner
 author: Rob Scott
-image: angularjs_logo.png
+image: /images/tutorials/angularjs_logo.png
 series: Introducing MEAN
 ---
 

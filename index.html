@@ -13,7 +13,7 @@ layout: default
             <span class="post-author"><i class="ss ss-user"></i> {{ post.author }}</span>
         </div>
         <div class="post-image">
-            <img src="/images/tutorials/{{ post.image }}" alt="Node.js image" />
+            <img src="{{ post.image | prepend: site.baseurl }}" alt="Node.js image" />
         </div>
         <div class="post-content">
             <h2>

@@ -23,7 +23,7 @@ tags: [
 ]
 difficulty: Beginner
 author: Rob Scott
-image: nodejs_logo_green.jpg
+image: /images/tutorials/nodejs_logo_green.jpg
 series: Introducing MEAN
 ---
 
