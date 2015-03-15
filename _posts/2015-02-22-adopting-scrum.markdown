@@ -15,8 +15,10 @@ tags: [
 ]
 difficulty: Beginner/Intermediate
 author: Rob Scott
-image: scrum-board.png
+image: scrum/sprint-hero.jpg
 ---
+
+![Example Scrum Board](/images/tutorials/scrum/sprint-hero.jpg)
 
 # Summary
 

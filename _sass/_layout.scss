@@ -385,6 +385,18 @@ article {
         color: $angular-color;
         border-color: darken($angular-background-color, 15%);
       }
+      &.agile {
+        @extend .tag;
+        background-color: $agile-background-color;
+        color: $agile-color;
+        border-color: darken($agile-background-color, 15%);
+      }
+      &.scrum {
+        @extend .tag;
+        background-color: $scrum-background-color;
+        color: $scrum-color;
+        border-color: darken($scrum-background-color, 15%);
+      }
     }
   }
 }
