@@ -258,19 +258,27 @@
 .post-content {
     margin-bottom: $spacing-unit;
 
+    h1 {
+      font-size: 32px;
+
+      @include media-query($on-laptop) {
+        font-size: 28px;
+      }
+    }
+
     h2 {
-        font-size: 32px;
+        font-size: 28px;
 
         @include media-query($on-laptop) {
-            font-size: 28px;
+            font-size: 24px;
         }
     }
 
     h3 {
-        font-size: 26px;
+        font-size: 24px;
 
         @include media-query($on-laptop) {
-            font-size: 22px;
+            font-size: 20px;
         }
     }
 
@@ -280,6 +288,22 @@
         @include media-query($on-laptop) {
             font-size: 18px;
         }
+    }
+
+    .clickable-header {
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .top-level-header {
+      display: inline;
+    }
+
+    .back-to-top {
+      margin-left: 10px;
+      cursor: pointer;
     }
 }
 
@@ -408,4 +432,26 @@ article {
 
 .clearfix {
     @extend %clearfix;
+}
+
+#toc {
+  float: right;
+  h1 {
+    color: $brand-color;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    border-top: 1px solid $brand-color;
+    border-left: 1px solid $brand-color;
+    border-right: 1px solid $brand-color;
+    border-radius: 4px;
+    li {
+      list-style: none;
+      line-height: 40px;
+      border-bottom: 1px solid $brand-color;
+      padding: 0 10px;
+    }
+  }
+
 }

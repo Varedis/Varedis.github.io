@@ -17,9 +17,16 @@ layout: default
         </div>
     </header>
 
-    <article class="post-content">
-        {{ content }}
-    </article>
+    <div class="col-9">
+        <article class="post-content">
+            {{ content }}
+        </article>
+    </div>
+    <div class="col-3">
+        <div id="toc"></div>
+    </div>
+
+    <div class="clearfix"></div>
     
     <div class="post-share">
         <div class="facebook-button">
@@ -53,7 +60,16 @@ layout: default
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
+
+    $(document).ready(function() {
+        $('#toc').toc({
+            title: '<div><h1>Sections</h1></div>',
+            listType: 'ul',
+            headers: 'h1',
+            showEffect: 'none'
+        });
+    });
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
+<script src="/js/toc.js"></script>

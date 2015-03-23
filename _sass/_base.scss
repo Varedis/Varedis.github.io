@@ -228,3 +228,55 @@ pre {
     font-size: 48px;
   }
 }
+
+.col {
+  float: left;
+}
+.col-1 {
+  width: 8.3%;
+  @extend .col;
+}
+.col-2 {
+  width: 16.6%;
+  @extend .col;
+}
+.col-3 {
+  width: 25%;
+  @extend .col;
+}
+.col-4 {
+  width: 33%;
+  @extend .col;
+}
+.col-5 {
+  width: 41.6%;
+  @extend .col;
+}
+.col-6 {
+  width: 50%;
+  @extend .col;
+}
+.col-7 {
+  width: 58.3%;
+  @extend .col;
+}
+.col-8 {
+  width: 66%;
+  @extend .col;
+}
+.col-9 {
+  width: 75%;
+  @extend .col;
+}
+.col-10 {
+  width: 83%;
+  @extend .col;
+}
+.col-11 {
+  width: 91.6%;
+  @extend .col;
+}
+.col-12 {
+  width: 100%;
+  @extend .col;
+}
