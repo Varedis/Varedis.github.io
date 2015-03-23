@@ -235,50 +235,86 @@ pre {
 .col-1 {
   width: 8.3%;
   @extend .col;
+  @include media-query($on-tablet) {
+    width: 100%;
+  }
 }
 .col-2 {
   width: 16.6%;
   @extend .col;
+  @include media-query($on-tablet) {
+    width: 100%;
+  }
 }
 .col-3 {
   width: 25%;
   @extend .col;
+  @include media-query($on-tablet) {
+    width: 100%;
+  }
 }
 .col-4 {
   width: 33%;
   @extend .col;
+  @include media-query($on-tablet) {
+    width: 100%;
+  }
 }
 .col-5 {
   width: 41.6%;
   @extend .col;
+  @include media-query($on-tablet) {
+    width: 100%;
+  }
 }
 .col-6 {
   width: 50%;
   @extend .col;
+  @include media-query($on-tablet) {
+    width: 100%;
+  }
 }
 .col-7 {
   width: 58.3%;
   @extend .col;
+  @include media-query($on-tablet) {
+    width: 100%;
+  }
 }
 .col-8 {
   width: 66%;
   @extend .col;
+  @include media-query($on-tablet) {
+    width: 100%;
+  }
 }
 .col-9 {
   width: 75%;
   @extend .col;
+  @include media-query($on-tablet) {
+    width: 100%;
+  }
 }
 .col-10 {
   width: 83%;
   @extend .col;
+  @include media-query($on-tablet) {
+    width: 100%;
+  }
 }
 .col-11 {
   width: 91.6%;
   @extend .col;
+  @include media-query($on-tablet) {
+    width: 100%;
+  }
 }
 .col-12 {
   width: 100%;
   @extend .col;
+  @include media-query($on-tablet) {
+    width: 100%;
+  }
 }
 
 .stick {

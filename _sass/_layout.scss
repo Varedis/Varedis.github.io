@@ -455,4 +455,8 @@ article {
     }
   }
 
+  @include media-query($on-tablet) {
+    display: none;
+  }
+
 }
