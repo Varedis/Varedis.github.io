@@ -280,3 +280,12 @@ pre {
   width: 100%;
   @extend .col;
 }
+
+.stick {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+}
+.bottom-stick {
+  position: relative;
+}
