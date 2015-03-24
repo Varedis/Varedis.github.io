@@ -76,7 +76,7 @@ We are now going to create our project. For now we will create all the required 
  
 We will add more files later but this will give us a starting point.
 
-#### package.json
+**package.json**
 
 Open the package.json file and enter the following:
 
@@ -92,7 +92,7 @@ Open the package.json file and enter the following:
 
 You could also create this file by running `npm init` and following the interactive steps.
 
-#### server.js
+**server.js**
 
 Inside the server.js we will place the logic we want to run when the server is started. For now we will keep this super simple.
 
@@ -119,7 +119,7 @@ With that done, you have created your first node.js application.
 
 No, we can't actually use our browsers to see anything with this example, we have just created executable code. To actually create a web server we need a few more lines of code.
 
-#### server.js
+**server.js**
 
 Replace the contents of `server.js` with the following, we will break it down line by line in a minute:
 
@@ -149,7 +149,7 @@ We should now see something printed out to your web browser. Lets break the code
  
 Correct, although its not going to win us any awards. Lets take a look at how we can improve our web server.
 
-#### server.js
+**server.js**
 
 Back in your server.js file lets make a few modifications:
 
@@ -234,7 +234,7 @@ We also used the `--save` flag, this stores the package name and version in the 
 
 Now we are going to make the necessary code modifications to make our application use the express package rather than the native http package.
  
-#### server.js
+**server.js**
 
 Replace the contents of `server.js` with the following:
 
@@ -267,7 +267,7 @@ So we haven't actually had to change that much, but what have we actually gained
 
 To round things off we will expand our `server.js` file to include a number of routes and different http methods.
  
-#### server.js
+**server.js**
 
 Replace the contents of `server.js` with the following:
 

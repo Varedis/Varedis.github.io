@@ -83,7 +83,7 @@ mongodb://myUser:myPassword@ds039441.mongolab.com:39441/learn-nodejs
 
 This will be the link we use in our application to connect to the database.
 
-# Getting MongoDB into your application
+# Adding MongoDB
 
 The first thing we need to do is install a new package to enable us to connect to the MongoDB database. To do that, run the following line from your terminal:
 
@@ -93,7 +93,7 @@ npm install --save mongoose
 
 Mongoose makes it nice and easy for interacting with our MongoDB database. To connect to your database, we are going to replace the contents of the server.js file with the following:
 
-#### server.js
+**server.js**
 
 {% highlight javascript %}
 var express = require('express'),
@@ -136,7 +136,7 @@ Your folder structure should now look something like this:
 
 We are going to change the following files to enable adding data to our MongoDB
 
-#### models/user.js
+**models/user.js**
 
 Add the following code to the `user.js` file:
 
@@ -167,14 +167,14 @@ userSchema.pre('save', function(next) {
 module.exports = mongoose.model('User', userSchema);
 {% endhighlight %}
 
-##### Code Breakdown
+**Code Breakdown**
 
 1. `var mongoose = require('mongoose');` - To access the mongoose functions in this module we need to require it.
 2. `var userSchema = mongoose.Schema({ ... });` - Here we are creating the schema for the collection, basically we are telling the collection what fields we want to include and the data types.
 3. `userSchema.pre('save', function(next) { ... };` - We can hook into functions to run blocks of code before the code is run by mongoose, here we are altering some date fields before saving the data.
 4. `var User = module.exports = mongoose.model('User', userSchema);` - Lastly we are exporting access to the model so we can access it outside of this file.
 
-#### index.js
+**index.js**
 
 Add the following lines to the `index.js` file:
 
@@ -213,7 +213,7 @@ Now that we have a user model (`models/user.js`) we can easily expand it with cu
 
 Edit the `models/user.js` file with the following code:
 
-#### models/user.js
+**models/user.js**
 
 {% highlight javascript %}
 var User = module.exports = mongoose.model('User', userSchema);
@@ -232,7 +232,7 @@ module.exports.getUserByEmail = function(email, callback) {
 
 Now we can add a new route in our application to fetch out a specific user by its id:
 
-#### server.js
+**server.js**
 
 {% highlight javascript %}
 app.get('/api/user/:id', function(request, response) {

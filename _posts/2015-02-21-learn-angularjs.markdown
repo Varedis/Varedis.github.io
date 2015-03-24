@@ -49,11 +49,11 @@ We are going to create a fresh folder structure for this tutorial, we don't need
 
 This should be enough to get us going for now, as we progress we will introduce some best practices in terms of files and our application structure.
 
-# First Steps
+# Creating our application
 
 First of all we are going to populate our `index.html` file with some boiler plate, that will allow us to pull in various things, like *AngularJS* and *Bootstrap*.
 
-#### index.html
+**index.html**
 
 {% highlight html %}
 <!doctype html>
@@ -87,7 +87,7 @@ Pretty standard html content, apart from the double braces (`{{` `}}`) and the `
 
 Next we are going to set up our angular application.
 
-#### app.js
+**app.js**
 
 {% highlight javascript %}
 angular.module('app', [])
@@ -96,7 +96,7 @@ angular.module('app', [])
     });
 {% endhighlight %}
 
-##### Code breakdown
+**Code breakdown**
 
 * `angular.module('app', [])` - Create a new AngularJS application which is called *app*. This is then used by the `data-ng-app` attribute in our html. For this tutorial we will stick to just having one module, but with this method you can have as many modules as you want.
 * `.controller('IndexController', function($scope) {` - Create a controller where we can start adding our logic, we give it the name *IndexController*. This is then used by the `data-ng-controller` attribute in our html. A module can contain as many controllers as you wish. We are also using dependency injection to inject the AngularJS *$scope* variable.
@@ -106,15 +106,15 @@ angular.module('app', [])
 
 So we have created a really simple application to start with, but we have already covered some really important AngularJS points. In the next section we will expand on our data binding implementation and look at two way data binding.
 
-##### What are data-ng-* attributes?
+## What are data-ng-* attributes?
 
 These are in built Angular JS directives, essentially they extend the functionality of html, it is important to note that you do not need the `data-` part of the attribute. Both `ng-controller` and `data-ng-controller` will work exactly the same. However, appending it with `data-` will keep the html valid if it is ran through any validators.
 
-# Next Steps
+# Data Binding
 
 To show off Angular's two way data binding, we are going to create a text input which when updated by the user, instantly updates the variable stored in javascript. If you have worked with something like jQuery before, then you know this can be a painful implementation, but with AngularJS it is made easy, as you will see below.
 
-#### index.html
+**index.html**
 
 Alter the contents of your `index.html` file to the following:
 
@@ -152,13 +152,13 @@ We don't even need to edit our Javascript for this to work. Simply refresh your 
 
 As soon as you start typing you should see the `user.name` variable populating on screen. All this magic is done by the `data-ng-model="user.name"` attribute. Essentially we are binding the value of this field to a variable in our javascript and AngularJS can instantly use this variable to start updating the view.
 
-# So what next?
+# Repeating elements
 
 Next we are going to demonstrate another powerful Angular Directive `ng-repeat`. Using this directive we can take an array from our javascript and construct html objects to represent them.
 
 Lets get started by editing our app.js file, inside the controller section, place the following code:
 
-#### app.js
+**app.js**
 
 {% highlight javascript %}
 $scope.users = [
@@ -200,7 +200,7 @@ All we are doing here is creating an array of objects, this sort of data will ty
 
 Now we are going to edit our `index.js` file to display this information on the screen in a formatted way.
  
-#### index.js
+**index.js**
 
 {% highlight html %}
 <!-- BODY TAG -->
@@ -217,7 +217,7 @@ Now we are going to edit our `index.js` file to display this information on the 
 <!-- SCRIPTS -->
 {% endhighlight %}
 
-##### Code breakdown
+**Code breakdown**
 
 The only new element here should be `data-ng-repeat` which takes an array from our `$scope` and allows us to step through it, we can then access each objects variables by using dot notations. We can even embed ng-repeats inside ng-repeats if we wish.
 
@@ -225,7 +225,7 @@ The only new element here should be `data-ng-repeat` which takes an array from o
 
 Wouldn't it be great if we could search our list of users and only show the ones that match our search criteria? Well with filters we can easily do that just by editing the html.
 
-#### index.js
+**index.js**
 
 Add the following line to your html file above our list of users:
 

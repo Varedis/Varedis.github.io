@@ -59,7 +59,7 @@ There are 3 main roles in the Scrum process, these people are responsible for en
 * Scrum Master
 * Development Team
 
-#### Product Owner
+## Product Owner
 
 The Product Owner should be the main stakeholder of the product and be the voice of the **customer**. They should also be responsible for the overall vision of the Product.
 
@@ -75,7 +75,7 @@ As the main point of contact for the **customer** the Product Owner will also be
 
 The Product Owner does not have to be a CEO or Director, but they should be someone with the power to affect change and have authority to manage the Product.
 
-#### Scrum Master
+## Scrum Master
 
 The Scrum Master is responsible for ensuring the the team sticks to the Scrum rules. They are also responsible for making sure any impediments or distractions are dealt with accordingly so they do not affect the **Sprint**.
 
@@ -87,7 +87,7 @@ They are also responsible for the following tasks:
 * Facilitating team meetings and Scrum Standups.
 * Educating others on the Scrum principles.
 
-#### Development Team
+## Development Team
 
 The Development Team is responsible for delivering the Product at the end of each **Sprint**. A team can be made up of any number of individuals, however it is recommended to stay below 10. The team should be cross functional and individuals should bring a range of skills.
  
@@ -95,7 +95,7 @@ The team should be self sustaining and self organising.
 
 It is important to have the correct balance of skills on the Development Team, if there is an important skill missing from the team and the only person that can do that particular tasks is working in another team then that could affect the whole teams **Sprint**.
 
-#### What about someone to manage the Project?
+## Project Manager?
 
 Due to the team setup, there shouldn't be any need for a Project Manager of any sort, every member of the team is equally responsible for this, Scrum should be collaborative not a dictatorship.
  
@@ -116,7 +116,7 @@ The Product Backlog will consist of items that are typically written in the foll
 
 It is possible to write items in any format you wish, however the Product Backlog should be clear and unambiguous. Writing items such as `fix user names` doesn't immediately provide an idea of what the task is and may get interpreted incorrectly by the team, or time wasted in explaining what the task is about.
 
-#### User Stories
+## User Stories
 
 User Stories are written in a structured format that emulates what a user wants to do and why. They typically take the following form:
 
@@ -132,7 +132,7 @@ Some examples of complete User Stories are:
 
 In these trivial examples you may not see the need for the "so that" section as it is somewhat obvious from the goal of the User Story, if you start to notice that you are breaking down your User Stories in such a way, it may become beneficial to remove this section, however I encourage you to start by including it, as it gets you actually thinking about what someone actually wants to do on the system.
 
-#### Tasks
+## Tasks
 
 Tasks are written in a non structured way and may introduce ambiguity into the work that needs to be done, Tasks should list what needs to be done in a matter of fact way that is clear and understandable.
 
@@ -144,7 +144,7 @@ Using the examples from the User Stories section and writing them as Tasks would
 
 Due to the unstructured nature of the tasks, it may actually take longer to read and understand, you also have to read the whole topic for key pieces of information, rather than just scanning for the right section of the User Story.
 
-#### What else can go in the Product Backlog
+### What can go in the Backlog
 
 Not everything in the Product Backlog has to be a User Story, you could also have bug fixes in there which are formatted in there own way. It is often much easier to write bug fixes such as this:
 
@@ -156,7 +156,7 @@ Rather than:
 
 Not only are we making up the why section (we shouldn't need to justify a bug fix) but we are repeating the same information and just padding it out.
 
-#### Managing a Product Backlog
+## Managing the Product Backlog
 
 The Product Backlog is one of the most essential steps involved in the Scrum process so it is crucial to get it correct. If the tasks aren't ordered correctly, or are not clear enough, then you run the risk of derailing the Sprint entirely.
 
@@ -174,7 +174,7 @@ So who does estimate the tasks? Well keeping in the sprint of being self organis
 
 Using the title of the **User Story** or **Task** together with the **Acceptance Criteria** the team should come to a consensus on the amount of work each story is.
 
-#### So how do you estimate each item?
+## How to estimate each item?
 
 **User Stories** are normally estimated in terms of **Story Points**. These are a strange concept to get your head around at first, but it will become clear why they are useful shortly.
 
@@ -191,7 +191,7 @@ There are no hard and fast rules when using **Story Points** and your teams will
 
 Lets take a look at how we would go about estimating as a team.
 
-#### Planning Poker
+### Planning Poker
 
 Planning Poker is a fun way of getting everyone involved in the planning process, it always encourages people to discuss challenges they see and to help them come to a mutual agreement on the estimation.
 
@@ -227,15 +227,14 @@ It is important for the team to come to their own conclusions on what is a 1 or 
 
 It is no good having 100 tasks all scored as 3, because then the 3 doesn't actually mean much unless all the tasks are exactly the same scope and size.
 
-
-
-
 # Conclusion 
 
 This concludes Part 1 of the Adopting Scrum and Agile methodologies tutorial. We have covered a lot of ground here and it is important to realise that these are just guidelines, Scrum is a set of principles, not a set of rules.
 
 In Part 2 we will be covering:
 
-* Sprints
-* Daily Scrum Standup
+* Sprint Planning
+* Scrum Board
+* Daily Routine
+* Daily Scrum stand up
 * Sprint Reviews and Retrospectives
