@@ -24,6 +24,7 @@ layout: default
     </div>
     <div class="col-3">
         <div id="toc"></div>
+        <div class="clearfix"></div>
     </div>
 
     <div class="clearfix"></div>
@@ -63,9 +64,8 @@ layout: default
 
     $(document).ready(function() {
         $('#toc').toc({
-            title: '<div><h1>Sections</h1></div>',
+            title: '',
             listType: 'ul',
-            headers: 'h1',
             showEffect: 'none'
         });
     });
