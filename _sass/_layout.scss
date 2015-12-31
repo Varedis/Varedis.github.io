@@ -429,6 +429,12 @@ article {
         color: $scrum-color;
         border-color: darken($scrum-background-color, 15%);
       }
+	  &.es6 {
+        @extend .tag;
+        background-color: $javascript-background-color;
+        color: $javascript-color;
+        border-color: darken($javascript-background-color, 20%);
+      }
     }
   }
 }
