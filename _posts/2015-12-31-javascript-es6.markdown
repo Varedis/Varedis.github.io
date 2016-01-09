@@ -1,7 +1,8 @@
 ---
 layout: post
 title:  "Understanding the differences between ES5 and ES6"
-date:   2015-12-31 16:42:00
+date:   2015-12-31 16:59:00
+updated: 2016-01-09 17:10:00
 categories: javascript
 tags: [
     {
@@ -474,9 +475,40 @@ var { name: myName, country: myCountry } = myObject();
 
 So I am still looking up the **name** and **country** keys, but storing them under the **myName** and **myCountry** variables respectively.
 
+# Default parameters
+
+Functions that accept parameters can have default values assigned to the variables.
+
+You may have found yourself doing something like this back in ES5:
+
+{% highlight javascript %}
+function greeting(greeting, name) {
+	greeting = greeting || "Hello";
+	name = name || "Bob";
+
+    return greeting + " " + name;
+}
+{% endhighlight %}
+
+For the most part this works, however you can't immediately see that these values are getting overwritten if they are no passed in.
+
+Now with ES6 you can pass default values directly into the parameter declaration, similar to how it would be done in a language like PHP.
+
+{% highlight javascript %}
+function greeting(greeting = "Hello", name = "Bob") {
+    return `${ greeting } ${ name }`;
+}
+
+console.log(greeting());			// Outputs: Hello Bob
+console.log(greeting("Hi"));		// Outputs: Hi Bob
+console.log(greeting("Hi John"));	// Outputs: Hi John
+{% endhighlight %}
+
+This not only makes it clearer that the parameters are optional, but makes the function much smaller also.
+
 # Generators
 
-Generators are functions that can be called, exited and then re-entered at a later time. Calling a generator does not immediatly execute the function, but rather returns an iterator that you can them call `.next()` on to step through the function.
+Generators are functions that can be called, exited and then re-entered at a later time. Calling a generator does not immediately execute the function, but rather returns an iterator that you can them call `.next()` on to step through the function.
 
 A simple example of a generator would be:
 

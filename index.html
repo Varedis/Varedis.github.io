@@ -9,7 +9,14 @@ layout: default
     {% for post in site.posts %}
     <div class="post-tutorial">
         <div class="post-meta">
-            <span><i class="ss ss-calendar"></i> {{ post.date | date: "%b %-d, %Y" }}</span>
+            <span>
+				<i class="ss ss-calendar"></i>
+				{% if post.updated %}
+					Updated: {{ post.updated | date: "%b %-d, %Y" }}
+				{% else %}
+					Posted: {{ post.date | date: "%b %-d, %Y" }}
+				{% endif %}
+			</span>
             <span class="post-author"><i class="ss ss-user"></i> {{ post.author }}</span>
         </div>
         <div class="post-image">
