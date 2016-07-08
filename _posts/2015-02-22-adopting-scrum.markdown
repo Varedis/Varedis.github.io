@@ -126,7 +126,7 @@ There are multiple variations of this, but this is the traditional version and t
 
 Some examples of complete User Stories are:
 
-* As a **User**, I want **to be prompted to saved before leaving the page**, so that **I don't lose any changes I have made**.
+* As a **User**, I want **to be prompted to save before leaving the page**, so that **I don't lose any changes I have made**.
 * As a **Guest**, I want **to be able to register for the site**, so that **I can become a User**.
 * As a **System Administrator**, I want **to be able to block users from accessing the site**, so that **I can manage my User base**.
 
