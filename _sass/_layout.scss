@@ -399,6 +399,12 @@ article {
         color: $express-color;
         border-color: darken($express-background-color, 50%);
       }
+      &.typescript {
+        @extend .tag;
+        background-color: $typescript-background-color;
+        color: $typescript-color;
+        border-color: darken($typescript-background-color, 30%);
+      }
       &.javascript {
         @extend .tag;
         background-color: $javascript-background-color;
