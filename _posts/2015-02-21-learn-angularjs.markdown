@@ -26,7 +26,7 @@ series: Introducing MEAN
 # Summary
 
 In this tutorial, we are going to take a break from Node.js for a little while and focus on AngularJS on its own. We will then join our Node application and our Angular application together in the next tutorial.
- 
+
 We will be looking at building our frontend interface from scratch and implementing Angular's two way data binding.
 
 # Introduction
@@ -55,7 +55,7 @@ First of all we are going to populate our `index.html` file with some boiler pla
 
 **index.html**
 
-{% highlight html %}
+{% highlight html %}{% raw %}
 <!doctype html>
 <html lang="en" data-ng-app="app">
 <head>
@@ -81,9 +81,9 @@ First of all we are going to populate our `index.html` file with some boiler pla
 
 </body>
 </html>
-{% endhighlight %}
+{% endraw %}{% endhighlight %}
 
-Pretty standard html content, apart from the double braces (`{{` `}}`) and the `data-ng` attributes. We will explain these in a minute once we have written on `app.js` code.
+Pretty standard html content, apart from the double braces and the `data-ng` attributes. We will explain these in a minute once we have written on `app.js` code.
 
 Next we are going to set up our angular application.
 
@@ -118,7 +118,7 @@ To show off Angular's two way data binding, we are going to create a text input 
 
 Alter the contents of your `index.html` file to the following:
 
-{% highlight html %}
+{% highlight html %}{% raw %}
 <!doctype html>
 <html lang="en" data-ng-app="app">
 <head>
@@ -146,7 +146,7 @@ Alter the contents of your `index.html` file to the following:
 
 </body>
 </html>
-{% endhighlight %}
+{% endraw %}{% endhighlight %}
 
 We don't even need to edit our Javascript for this to work. Simply refresh your browser and starting typing in the field.
 
@@ -199,10 +199,10 @@ $scope.users = [
 All we are doing here is creating an array of objects, this sort of data will typically come from some sort of API, but for now we can hardcode it.
 
 Now we are going to edit our `index.js` file to display this information on the screen in a formatted way.
- 
+
 **index.js**
 
-{% highlight html %}
+{% highlight html %}{% raw %}
 <!-- BODY TAG -->
 
 <ul>
@@ -215,7 +215,7 @@ Now we are going to edit our `index.js` file to display this information on the 
 </ul>
 
 <!-- SCRIPTS -->
-{% endhighlight %}
+{% endraw %}{% endhighlight %}
 
 **Code breakdown**
 
@@ -241,7 +241,7 @@ Then edit our `ng-repeat` to look like the following:
 
 And that's it, simply search for something like `Sara` or `Development` and your list of users will be filtered out accordingly.
 
-# Conclusion 
+# Conclusion
 
 In this short tutorial we have covered some powerful features inside AngularJS. We have covered two way data binding, directives and filters.
 
