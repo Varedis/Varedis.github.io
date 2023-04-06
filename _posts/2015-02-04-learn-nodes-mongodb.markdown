@@ -43,7 +43,7 @@ We will be creating a database to store our user information and then creating r
 
 # Source Code
 
-We will be working from where we left off in [Part 1](http://developmentr.com/nodejs/2015/01/30/learn-nodejs.html), so you can use the code you already have, or you can grab a fresh copy from [github](https://github.com/Varedis/Learn-nodejs-in-30-minutes){:target="_blank"}.
+We will be working from where we left off in [Part 1](http://varedis.github.io/nodejs/2015/01/30/learn-nodejs.html), so you can use the code you already have, or you can grab a fresh copy from [github](https://github.com/Varedis/Learn-nodejs-in-30-minutes){:target="_blank"}.
 
 # Getting Started
 

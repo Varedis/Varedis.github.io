@@ -26,7 +26,7 @@ In this tutorial, we will continue to look at how we can improve our software wo
 
 # Introduction
 
-In [Part 1](http://developmentr.com/agile/2015/02/22/adopting-scrum.html) we covered the basics of introducing the Scrum concept, creating the right team structure and creating a Product Backlog.
+In [Part 1](http://varedis.github.io/agile/2015/02/22/adopting-scrum.html) we covered the basics of introducing the Scrum concept, creating the right team structure and creating a Product Backlog.
  
 In this tutorial we will be covering the Sprints, and the process around them. The topics we will be covering are as follows: 
  
